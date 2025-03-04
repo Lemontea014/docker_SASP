@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # pipを使います.pythonライブラリのインストール
-RUN pip install --upgrade pip && pip install --no-cache-dir \
+RUN pip3 install --upgrade pip && pip install --no-cache-dir \
     torch==1.8.1+cu111 \
     torchvision==0.9.1+cu111 \
     torchaudio==0.8.1 \
