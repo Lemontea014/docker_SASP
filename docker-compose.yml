@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  container_for_SASP:
+    build: .
+    container_name: test_container  # コンテナ名！！！！！ここは任意の名前に変更してください！！！！！
+    runtime: nvidia  # GPU を有効化
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    ports:
+      - "8888:8888"  # JupyterLab
+      - "6006:6006"  # TensorBoard
+    stdin_open: true  # -it を有効にする
+    tty: true         # コンテナを対話モードで実行
