@@ -29,4 +29,4 @@ docker run -it --gpus all -p 8888:8888 -p 6006:6006 --name my-gpu-container my-g
 jupyter-lab --allow-root --ip=0.0.0.0 --port=8888 --no-browser
 ```
 - 表示されるアドレスを開けば, webブラウザ上で仮想環境に入れるはずです. これで一旦の環境構築は終わりです.
-- !!注意!! アドレスはおそらくhttp://localhost:8888/のように表示されますが, localhostの部分をホスト側（コンテナがある）PCのIPアドレスに置き換えてください.
+- !!注意!! アドレスはおそらく`http://localhost:8888/`のように表示されますが, localhostの部分をホスト側（コンテナがある）PCのIPアドレスに置き換えてください.
