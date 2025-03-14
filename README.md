@@ -22,7 +22,7 @@ docker build -t my-gpu-image .
 ```
 - 作成したイメージを使って, コンテナを作成＆起動（コンテナ名を適当にmy-gpu-containerとします）
 ```
-docker run -it --gpus all -p 8888:8888 -p 6006:6006 --name my-gpu-container my-gpu-image
+docker run -it -d --gpus all -p 8888:8888 -p 6006:6006 --name my-gpu-container my-gpu-image
 ```
 - jupyterlabを起動（遠隔操作側のPCで開けるように、--no-browserをつけておく）
 ```
